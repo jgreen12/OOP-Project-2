@@ -22,17 +22,19 @@ public class BaseCharacter {
     int con;
     int intl;
     int attack;
-    int mod; 
     int health;
+    int currentHealth;
     
     public BaseCharacter()
     {
-       armor = new Armor();
+        armor = new Armor();
     }
     
     public BaseCharacter(String name)
     {
         this.name = name;
+        armor = new Armor();
+        
     }
     
     
@@ -71,39 +73,45 @@ public class BaseCharacter {
         return con;
     }
     
+    
+    
+    
     public void setAC()
     {
         int dexMod;
         dexMod = (dex - 10)/2;
-        if(str == 18) //Armor class of a warrior
-        {
-            AC = armor.heavyArmor;
-        }
-        else if(str == 12) //Armor class of a thief
-        {
-            AC = dexMod + armor.mediumArmor;
-        }
-        else if(str == 8) //Armor class of a wizard
-        {
-             AC = dexMod + armor.lightArmor;       
+        switch (str) {
+        //Armor class of a warrior
+            case 18:
+                AC = armor.heavyArmor;
+                break;
+        //Armor class of a thief
+            case 12:
+                AC = dexMod + armor.mediumArmor;
+                break;
+        //Armor class of a wizard
+            case 8:       
+                AC = dexMod + armor.lightArmor;
+                break;
+            default:
+                break;
         }
     }
     
-    public void setMod(int stat)
+    public int getMod(int stat)
     {
-        mod = (stat - 10)/2;
-        System.out.println("Testing: " + str + ","+ dex + "," + con+ "," + intl);
-        System.out.println("Testing: " + mod);
+        return (stat - 10)/2;
     }
     
-        public void setHealth(int base, int constant)
+    public void setHealth(int base)
     {
-        if(exp == 0)
-        {
-          health = base + con;
-        }
-        health = health + constant + con; //Everytime the character levels, their health will increase according to this formula. 
-
+          health = base + getMod(con);
+    }
+    
+    public void levelUp(int constant)
+    {
+        currentHealth = health = health + constant + con;  //Everytime the character levels, their health will increase according to this formula.
+        
     }
     
 }
