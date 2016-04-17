@@ -23,6 +23,9 @@ public class Warrior extends BaseCharacter{
         this.con = 15;
         this.intl = 8;
         this.attack = 6;
+        super.setAC();
+        super.setHealth(10); //A warriors base health will by 10 + con, and after every level 6 + con.
+        
     }
     
     public Warrior()
