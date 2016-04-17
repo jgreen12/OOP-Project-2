@@ -21,6 +21,9 @@ public class Thief extends BaseCharacter{
         this.con = 12;
         this.intl = 10;
         this.attack = 10;
+        super.setAC();
+        super.setHealth(8); //A thief base health will be 8 + con, and after every level 5 + con.
+        
     }
     
     public Thief()
