@@ -23,6 +23,7 @@ public class BaseCharacter {
     int intl;
     int attack;
     int mod; 
+    int health;
     
     public BaseCharacter()
     {
@@ -93,6 +94,16 @@ public class BaseCharacter {
         mod = (stat - 10)/2;
         System.out.println("Testing: " + str + ","+ dex + "," + con+ "," + intl);
         System.out.println("Testing: " + mod);
+    }
+    
+        public void setHealth(int base, int constant)
+    {
+        if(exp == 0)
+        {
+          health = base + con;
+        }
+        health = health + constant + con; //Everytime the character levels, their health will increase according to this formula. 
+
     }
     
 }
