@@ -21,10 +21,23 @@ public class Dice{
         this.end = end;
     }
     
-    public int randomDiceAttack(int bonus)
+    public int randomDiceAttack(int mod)
     {
-        return random.nextInt(20) + 1 + bonus;
+        return random.nextInt(20) + 1 + mod;
+    }
+    
+    public int randomDiceDamageWarrior(int weapon, int mod)
+    {
+        return random.nextInt(weapon) + mod + 1;
+    }
+    
+    public int randomDiceDamageThief(int weapon, int mod)
+    {
+        return random.nextInt(weapon)+ random.nextInt(weapon) + random.nextInt(weapon) + mod + 1;
     }
 
-    
+    public int randomDiceDamageWizard(int weapon, int mod)
+    {
+        return random.nextInt(weapon) + random.nextInt(weapon) + mod + 1;
+    }
 }
