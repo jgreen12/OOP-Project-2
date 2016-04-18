@@ -13,12 +13,10 @@ import java.util.Random;
 public class Dice{
     
     Random random = new Random();
-    int end;
     
     
-    public Dice(int end)
+    public Dice()
     {
-        this.end = end;
     }
     
     public int randomDiceAttack(int mod)
