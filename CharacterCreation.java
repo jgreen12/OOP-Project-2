@@ -24,10 +24,10 @@ public class CharacterCreation {
         int choice;
         String name;
         
-        System.out.println("Hello, this is a character test, please choose what class you want to be: ");
-        System.out.println("1. Warrior "); //A warrior will have higher health + Armor so itll be harder to hit them.
-        System.out.println("2. Thief"); //A Thief has better flat damage, constant damage.
-        System.out.println("3. Wizard"); //A wizard will have the biggest damage. 
+        sy("Hello, this is a character test, please choose what class you want to be: ");
+        sy("1. Warrior "); //A warrior will have higher health + Armor so itll be harder to hit them.
+        sy("2. Thief"); //A Thief has better flat damage, constant damage.
+        sy("3. Wizard"); //A wizard will have the biggest damage. 
         choice = input.nextInt();
         
         switch(choice){
@@ -50,6 +50,11 @@ public class CharacterCreation {
                 Wizard wizard = new Wizard(name); //A wizard base health will be 6 + con, and after every level 4 + con.
                 break;
         }
+    }
+    
+    public void sy(String s)
+    {
+        System.out.println(s);
     }
     
 }
