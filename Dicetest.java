@@ -17,7 +17,7 @@ public class Dicetest {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Dice dice = new Dice(12);
+        Dice dice = new Dice();
         Weapons weapons = new Weapons();
         Warrior warrior = new Warrior("Denny");
         Thief thief = new Thief ("Donovan");
