@@ -19,7 +19,8 @@ public class EnemyDragon extends BaseCharacter{
         this.str = 20;
         this.dex = 20;
         this.con = 20;
-        this.intl = 20;      
+        this.intl = 20;   
+        super.setMod(str);
         super.setHealth(200);            
     }
     
