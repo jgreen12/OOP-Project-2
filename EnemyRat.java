@@ -19,7 +19,8 @@ public class EnemyRat extends BaseCharacter {
         this.str = 12;
         this.dex = 15;
         this.con = 8;
-        this.intl = 8;      
+        this.intl = 8; 
+        super.setMod(dex);
         super.setHealth(5);            
     }
     
