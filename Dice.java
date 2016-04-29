@@ -16,9 +16,8 @@ public class Dice{
     int end;
     
     
-    public Dice(int end)
+    public Dice()
     {
-        this.end = end;
     }
     
     public int randomDiceAttack(int mod)
