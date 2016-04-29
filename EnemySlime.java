@@ -19,7 +19,8 @@ public class EnemySlime extends BaseCharacter{
         this.str = 12;
         this.dex = 12;
         this.con = 10;
-        this.intl = 5;      
+        this.intl = 5;
+        super.setMod(dex);
         super.setHealth(9);            
     }
     
