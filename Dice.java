@@ -13,10 +13,12 @@ import java.util.Random;
 public class Dice{
     
     Random random = new Random();
+    int end;
     
     
-    public Dice()
+    public Dice(int end)
     {
+        this.end = end;
     }
     
     public int randomDiceAttack(int mod)
@@ -38,4 +40,20 @@ public class Dice{
     {
         return random.nextInt(weapon) + random.nextInt(weapon) + mod + 1;
     }
+    
+    public int randomDiceDamageLvl1(int weapon, int mod) //Rats and Slime
+    {
+        return random.nextInt(weapon) + mod + 1;
+    }
+    
+    public int randomDiceDamageLvl2(int weapon, int mod) //Trolls and Golems
+    {
+        return random.nextInt(weapon) + random.nextInt(weapon) + mod + 1;
+    }
+    
+    public int randomDiceDamageDragon(int weapon, int mod)
+    {
+        return random.nextInt(weapon) + random.nextInt(weapon) + mod + 1;
+    }
+    
 }
