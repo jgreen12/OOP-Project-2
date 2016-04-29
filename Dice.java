@@ -65,7 +65,7 @@ public class Dice{
         }
         else if(player.type == "Troll")
         {
-            
+            return random.nextInt(weapon)+ random.nextInt(weapon) + random.nextInt(weapon) + mod + 1;
         }
         else if(player.type == "Dragon")
         {
