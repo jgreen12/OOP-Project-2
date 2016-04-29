@@ -15,24 +15,29 @@ public class BaseCharacter {
     Armor armor;
     String type;
     String name; 
+    Weapons weapons;
     int AC;
     int exp;
     int str;
     int dex;
     int con;
     int intl;
+    int mod;
+    int equipedWeapon;
     int health;
     int currentHealth;
     
     public BaseCharacter()
     {
         armor = new Armor();
+        weapons = new Weapons();
     }
     
     public BaseCharacter(String name)
     {
         this.name = name;
         armor = new Armor();
+        weapons = new Weapons();
         
     }
     
@@ -83,18 +88,27 @@ public class BaseCharacter {
         //Armor class of a warrior
             case 18:
                 AC = armor.heavyArmor;
+                equipedWeapon = weapons.Club;
                 break;
         //Armor class of a thief
             case 12:
                 AC = dexMod + armor.mediumArmor;
+                equipedWeapon = weapons.dagger;
                 break;
         //Armor class of a wizard
             case 8:       
                 AC = dexMod + armor.lightArmor;
+                equipedWeapon = weapons.staff;
                 break;
             default:
                 break;
         }
+    }
+    
+    public void setMod(int stat)
+    {
+        mod = (stat - 10)/2;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public int getMod(int stat)
@@ -104,14 +118,26 @@ public class BaseCharacter {
     
     public void setHealth(int base)
     {
-          currentHealth = health = base + getMod(con);
-          
+          health = base + getMod(con);
+          currentHealth = health;
     }
     
-    public void levelUp(int constant)
+    public void levelUp()
     {
-        currentHealth = health = health + constant + con;  //Everytime the character levels, their health will increase according to this formula.
+        if(type == "Warrior")
+        {
+            currentHealth = health = health + 10 + getMod(con);
+        }  
+        else if(type == "Wizard")
+        {
+            currentHealth = health = health + 4 + getMod(con);
+        }
+        else if(type == "Thief")
+        {
+            currentHealth = health = health + 6 + getMod(con);
+        }
         
     }
+
     
 }

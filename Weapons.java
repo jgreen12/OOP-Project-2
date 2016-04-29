@@ -12,20 +12,26 @@ public class Weapons {
     
     
             //Warrior weapons
-        int Club = 4;
+        int Club = 6;
         int longSwd = 8;
         int greatSwd = 10;
         
         //Thief weapons
-        int dagger = 4;
-        int shortSwd = 8;
-        int Rapier = 10;
+        int dagger = 8;
+        int shortSwd = 10;
+        int Rapier = 12;
         
         
         //Wizard weapons
-        int staff = 6;
-        int greatStaff = 10;
-        int grandStaff = 12;
+        int staff = 12;
+        int greatStaff = 14;
+        int grandStaff = 16;
+        
+        //Monster weapons
+        int ratClaws = 4;
+        int slimePounce = 6;
+        int dragonClaws = 16;
+        int trollClub = 10;
     
     public Weapons()
     {

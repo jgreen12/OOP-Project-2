@@ -18,13 +18,13 @@ public class Warrior extends BaseCharacter{
         this.type = "Warrior";
         this.AC = 0;
         this.exp = 0;
-        this.str = 18;
+        this.str = 18;//Warrior mod stat, getMod(str); 
         this.dex = 8;
         this.con = 15;
-        this.intl = 8;
-        super.setAC();
-        super.setHealth(20); //A warriors base health will by 20 + con, and after every level 12 + con.
-        
+        this.intl = 8;  
+        super.setMod(str);
+        super.setAC(); 
+        super.setHealth(20);            
     }
     
     public Warrior()

@@ -16,13 +16,13 @@ public class Thief extends BaseCharacter{
         this.type = "Thief";
         this.AC = 0;
         this.exp = 0;
-        this.str = 10;
-        this.dex = 18;
+        this.str = 12;
+        this.dex = 18; //Thief mod stat, getMod(dex); 
         this.con = 12;
         this.intl = 10;
-        super.setAC();
-        super.setHealth(16); //A thief base health will be 16 + con, and after every level 10 + con.
-        
+        super.setMod(dex);
+        super.setAC(); 
+        super.setHealth(18);
     }
     
     public Thief()
