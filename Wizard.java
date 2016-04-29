@@ -20,7 +20,6 @@ public class Wizard extends BaseCharacter{
         this.dex = 10;
         this.con = 10;
         this.intl = 18;
-        this.attack = 12;
         super.setAC();
         super.setHealth(14); //A wizard base health will be 14 + con, and after every level 8 + con.
     }
