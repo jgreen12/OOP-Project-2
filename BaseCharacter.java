@@ -21,7 +21,6 @@ public class BaseCharacter {
     int dex;
     int con;
     int intl;
-    int attack;
     int health;
     int currentHealth;
     
@@ -105,7 +104,8 @@ public class BaseCharacter {
     
     public void setHealth(int base)
     {
-          health = base + getMod(con);
+          currentHealth = health = base + getMod(con);
+          
     }
     
     public void levelUp(int constant)
