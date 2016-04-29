@@ -19,7 +19,7 @@ public class Dicetest {
         
         boolean death = false;
         
-        Dice dice = new Dice(12);
+        Dice dice = new Dice();
         Weapons weapons = new Weapons();
         Warrior warrior = new Warrior("Denny");
         Thief thief = new Thief ("Donovan");
